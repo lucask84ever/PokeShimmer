@@ -41,17 +41,6 @@ class PokedexViewModel {
         }
     }
     
-    func retrieveImage(_ stringURL: String) {
-        service.fetchImage(from: stringURL) { [weak self] result in
-            switch result {
-            case .success(let dataImage):
-                self?.pokeDelegate?.onSuccess()
-            case .failure(let error):
-                self?.pokeDelegate?.onError(error)
-            }
-        }
-    }
-    
     func getPokemons() -> [Pokemon] {
         return pokedex?.pokemons ?? []
     }
