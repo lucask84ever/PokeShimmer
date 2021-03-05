@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Config.plist
+   PokeShimmer
+
+   Created by lucas.lima on 05/03/21.
+   Copyright (c) 2021 lucas.lima. All rights reserved.
+-->
+<plist version="1.0">
+<dict>
+    <key>apiURL</key>
+    <string>https://pokeapi.co/api/v2/pokedex/2/</string>
+    <key>imageURL</key>
+    <string>https://pokeres.bastionbot.org/images/pokemon/</string>
+</dict>
+</plist>
