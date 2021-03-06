@@ -50,7 +50,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width - 40
+        let width = UIScreen.main.bounds.width/3 - 16
         let height = 1.25 * width
         return CGSize(width: width, height: height)
     }
