@@ -1,6 +1,0 @@
-framework module Pods_PokeShimmer {
-  umbrella header "Pods-PokeShimmer-umbrella.h"
-
-  export *
-  module * { export * }
-}
