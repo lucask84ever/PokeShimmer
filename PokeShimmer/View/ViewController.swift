@@ -39,7 +39,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pokeCell", for: indexPath) as? PokemonCollectionViewCell {
-            
+            cell.pokeImageView.showAnimatedSkeleton()
+            cell.pokeNameLabel.showAnimatedSkeleton()
             if !viewModel.getPokemons().isEmpty {
                 let model = viewModel.getPokemons()[indexPath.row]
                 cell.setup(with: model)
@@ -53,6 +54,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let width = UIScreen.main.bounds.width/3 - 16
         let height = 1.25 * width
         return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = viewModel.getPokemons()[indexPath.row]
+        let pokemonViewModel = DetailPokemonViewModel(pokemon: model)
+        if let detail = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailPokemonViewController") as? DetailPokemonViewController {
+            detail.viewModel = pokemonViewModel
+            navigationController?.pushViewController(detail, animated: true)
+        }
     }
 }
 

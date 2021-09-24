@@ -11,6 +11,7 @@ import Foundation
 enum Config: String {
     case apiURL
     case imageURL
+    case pokemonURL
     
     // Retrieve URL values from Plist File
     func getValue() -> String? {

@@ -14,7 +14,7 @@ struct Pokemon: Decodable {
     
     func getImageUrl() -> String {
         guard let baseURL = Config.imageURL.getValue() else { return "" }
-        return "\(baseURL)\(entry_number).png"
+        return "\(baseURL)\(String(format:"%03d", entry_number)).png"
     }
 }
 

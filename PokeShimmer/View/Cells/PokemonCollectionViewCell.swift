@@ -7,14 +7,13 @@
 //
 
 import UIKit
+import SkeletonView
 
 class PokemonCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var pokeImageView: UIImageView!
     @IBOutlet weak var pokeNameLabel: UILabel!
     @IBOutlet weak var cellBackgroundView: UIView!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,11 +22,13 @@ class PokemonCollectionViewCell: UICollectionViewCell {
         cellBackgroundView.layer.cornerRadius = 16
         cellBackgroundView.layer.borderColor = UIColor.black.cgColor
         cellBackgroundView.layer.borderWidth = 2
+        pokeNameLabel.minimumScaleFactor = 0.3
     }
     
     func setup(with pokemon: Pokemon) {
         pokeNameLabel.text = "\(String(format: "%03d", pokemon.entry_number)) - \(pokemon.pokemon_species.name.capitalized)"
         pokeImageView.downloadImage(from: pokemon.getImageUrl())
+        pokeNameLabel.hideSkeleton()
     }
 
 }

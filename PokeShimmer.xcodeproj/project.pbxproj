@@ -25,6 +25,11 @@
 		103CBC5125F2C0B900C4C606 /* PokemonHollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 103CBC4C25F2AD8700C4C606 /* PokemonHollow.ttf */; };
 		103CBC5225F2C0BC00C4C606 /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 103CBC4D25F2AD8700C4C606 /* PokemonSolid.ttf */; };
 		BEB7360A3963E7FB0C041578 /* Pods_PokeShimmer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0E3D2E086B5D78AE7EAF92 /* Pods_PokeShimmer.framework */; };
+		F3CA316226FE53240002CD0F /* PokeTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA316026FE53240002CD0F /* PokeTypeTableViewCell.swift */; };
+		F3CA316326FE53240002CD0F /* PokeTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CA316126FE53240002CD0F /* PokeTypeTableViewCell.xib */; };
+		F3CA316726FE547B0002CD0F /* EnumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA316626FE547B0002CD0F /* EnumType.swift */; };
+		F3CA316F26FE62500002CD0F /* DetailPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA316E26FE62500002CD0F /* DetailPokemonViewController.swift */; };
+		F3CA317126FE69810002CD0F /* DetailPokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA317026FE69810002CD0F /* DetailPokemonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,11 @@
 		1C0E3D2E086B5D78AE7EAF92 /* Pods_PokeShimmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeShimmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D9B5E55CC859B40D81D211 /* Pods-PokeShimmer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeShimmer.debug.xcconfig"; path = "Target Support Files/Pods-PokeShimmer/Pods-PokeShimmer.debug.xcconfig"; sourceTree = "<group>"; };
 		41DE82E72AD41A4A9CB6CF6A /* Pods-PokeShimmer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeShimmer.release.xcconfig"; path = "Target Support Files/Pods-PokeShimmer/Pods-PokeShimmer.release.xcconfig"; sourceTree = "<group>"; };
+		F3CA316026FE53240002CD0F /* PokeTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeTypeTableViewCell.swift; sourceTree = "<group>"; };
+		F3CA316126FE53240002CD0F /* PokeTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokeTypeTableViewCell.xib; sourceTree = "<group>"; };
+		F3CA316626FE547B0002CD0F /* EnumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumType.swift; sourceTree = "<group>"; };
+		F3CA316E26FE62500002CD0F /* DetailPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPokemonViewController.swift; sourceTree = "<group>"; };
+		F3CA317026FE69810002CD0F /* DetailPokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPokemonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +122,10 @@
 		103CBC3025F262D500C4C606 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				103CBC3625F2671F00C4C606 /* Cell */,
-				103CBC1F25F2628B00C4C606 /* ViewController.swift */,
+				103CBC3625F2671F00C4C606 /* Cells */,
+				F3CA316D26FE62150002CD0F /* DetailPokemon */,
 				103CBC2125F2628B00C4C606 /* Main.storyboard */,
+				103CBC1F25F2628B00C4C606 /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				103CBC4725F28BDE00C4C606 /* PokedexViewModel.swift */,
+				F3CA317026FE69810002CD0F /* DetailPokemonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -138,19 +150,23 @@
 		103CBC3325F262ED00C4C606 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3CA316526FE546F0002CD0F /* Enum */,
+				F3CA316426FE54670002CD0F /* Structs */,
 				103CBC3425F262F700C4C606 /* Pokemon.swift */,
 				103CBC4225F2802E00C4C606 /* Pokedex.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		103CBC3625F2671F00C4C606 /* Cell */ = {
+		103CBC3625F2671F00C4C606 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				103CBC3725F2674000C4C606 /* PokemonCollectionViewCell.swift */,
 				103CBC3825F2674000C4C606 /* PokemonCollectionViewCell.xib */,
+				F3CA316026FE53240002CD0F /* PokeTypeTableViewCell.swift */,
+				F3CA316126FE53240002CD0F /* PokeTypeTableViewCell.xib */,
 			);
-			path = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		103CBC3D25F27C4200C4C606 /* Config */ = {
@@ -186,6 +202,29 @@
 				41DE82E72AD41A4A9CB6CF6A /* Pods-PokeShimmer.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3CA316426FE54670002CD0F /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		F3CA316526FE546F0002CD0F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				F3CA316626FE547B0002CD0F /* EnumType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		F3CA316D26FE62150002CD0F /* DetailPokemon */ = {
+			isa = PBXGroup;
+			children = (
+				F3CA316E26FE62500002CD0F /* DetailPokemonViewController.swift */,
+			);
+			path = DetailPokemon;
 			sourceTree = "<group>";
 		};
 		F517073BAD126B1FEA430970 /* Frameworks */ = {
@@ -225,7 +264,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = lucas.lima;
 				TargetAttributes = {
 					103CBC1725F2628B00C4C606 = {
@@ -262,6 +301,7 @@
 				103CBC4125F27D2800C4C606 /* Config.plist in Resources */,
 				103CBC5225F2C0BC00C4C606 /* PokemonSolid.ttf in Resources */,
 				103CBC2325F2628B00C4C606 /* Main.storyboard in Resources */,
+				F3CA316326FE53240002CD0F /* PokeTypeTableViewCell.xib in Resources */,
 				103CBC5125F2C0B900C4C606 /* PokemonHollow.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,13 +358,17 @@
 				103CBC4B25F2A57E00C4C606 /* UIImageView+Extension.swift in Sources */,
 				103CBC4325F2802E00C4C606 /* Pokedex.swift in Sources */,
 				103CBC2025F2628B00C4C606 /* ViewController.swift in Sources */,
+				F3CA316226FE53240002CD0F /* PokeTypeTableViewCell.swift in Sources */,
 				103CBC3525F262F700C4C606 /* Pokemon.swift in Sources */,
+				F3CA317126FE69810002CD0F /* DetailPokemonViewModel.swift in Sources */,
 				103CBC4825F28BDE00C4C606 /* PokedexViewModel.swift in Sources */,
 				103CBC3C25F26C9A00C4C606 /* PokeService.swift in Sources */,
 				103CBC3F25F27C4E00C4C606 /* Config.swift in Sources */,
+				F3CA316726FE547B0002CD0F /* EnumType.swift in Sources */,
 				103CBC1C25F2628B00C4C606 /* AppDelegate.swift in Sources */,
 				103CBC3925F2674000C4C606 /* PokemonCollectionViewCell.swift in Sources */,
 				103CBC1E25F2628B00C4C606 /* SceneDelegate.swift in Sources */,
+				F3CA316F26FE62500002CD0F /* DetailPokemonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +420,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -436,6 +481,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -470,7 +516,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W89LBPGTZ;
 				INFOPLIST_FILE = PokeShimmer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,7 +536,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W89LBPGTZ;
 				INFOPLIST_FILE = PokeShimmer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

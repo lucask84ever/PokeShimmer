@@ -37,7 +37,9 @@ class PokeService {
         }
         task.resume()
     }
-    
+    /// description: Fetch pokemon image from the url
+    /// parameters: url string
+    /// return: JsonData to be decoded
     func fetchImage(from urlString: String, completion: @escaping(Result<Data, PokeError>) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(.failure(.badUrl))
